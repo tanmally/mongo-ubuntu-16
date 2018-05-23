@@ -30,6 +30,7 @@ task:
   - name: Run mongo db auth setup script
     cmd:
         - export DEBIAN_FRONTEND=noninteractive
+        - mkdir -p /data/db
         - chmod +x /opt/mongo/script/db_config.sh
         - /opt/mongo/script/db_config.sh
         - rm -f /opt/mongo/script/db_config.sh

@@ -8,10 +8,12 @@ then
 USER={{MONGODB_USERNAME}}
 PASS={{MONGODB_PASSWORD}}
 DB="admin"
+ROLE="userAdminAnyDatabase"
+
 
 # Create User
 echo "Creating user: \"$USER\"..."
-mongo $DB --eval "db.createUser({ user: '$USER', pwd: '$PASS', roles: [ { role: 'userAdminAnyDatabase', db: '$DB' } ] });"
+mongo $DB --eval "db.createUser({ user: '$USER', pwd: '$PASS', roles: [ { role: '$ROLE', db: '$DB' } ] });"
 
 # Stop MongoDB service
 systemctl restart mongod
