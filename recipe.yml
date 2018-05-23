@@ -1,5 +1,5 @@
-name : Install Redis on Ubunutu 16.04
-desc : The recipe installs the redis service to Ubunutu 16.04 box  
+name : Install Mongo DB on Ubunutu 16.04
+desc : The recipe installs the mongo db on Ubunutu 16.04  
 logo_url: https://raw.githubusercontent.com/tanmally/mongo-ubuntu-16/master/logo/mongo.jpg
 tags:
     - mongo db
