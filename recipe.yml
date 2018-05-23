@@ -31,6 +31,7 @@ task:
         - export DEBIAN_FRONTEND=noninteractive
         - chmod +x /opt/mongo/script/db_config.sh
         - /opt/mongo/script/db_config.sh
+        - rm -f /opt/mongo/script/db_config.sh
         - echo Done running mongo db auth setup
     vars:
         - SKIP_AUTH_SETUP
