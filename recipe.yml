@@ -25,6 +25,7 @@ task:
          src_file: script/db_config.sh
          target_dir: /opt/mongo/script/
          target_file_name : db_config.sh
+         create_target_dir_if_missing : true 
 
   - name: Run mongo db auth setup script
     cmd:
