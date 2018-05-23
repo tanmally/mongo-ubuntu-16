@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MONGODB_SKIP_AUTH_SETUP={{SKIP_AUTH_SETUP}}
+MONGODB_SKIP_AUTH_SETUP="No"
 
 if [ ! "$MONGODB_SKIP_AUTH_SETUP" = 'yes' ]; 
 then

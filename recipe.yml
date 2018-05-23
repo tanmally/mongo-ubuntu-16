@@ -35,7 +35,17 @@ task:
         - rm -f /opt/mongo/script/db_config.sh
         - echo Done running mongo db auth setup
     vars:
-        - SKIP_AUTH_SETUP
         - MONGODB_USERNAME
         - MONGODB_PASSWORD
+        
+  - name: Copy mongod conf file 
+    copy: 
+         src_file: conf/mongod.conf
+         target_dir: /etc/
+         target_file_name : mongod.conf
+         create_target_dir_if_missing : true 
+     vars:
+        - MONGODB_PORT
+        - MONGODB_BIND_IP
+
   
